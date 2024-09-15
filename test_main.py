@@ -1,7 +1,7 @@
 import pytest
 import requests
 import allure
-from models import Task
+from db_models import Task
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlmodel import SQLModel

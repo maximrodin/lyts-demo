@@ -134,6 +134,7 @@ class CombinedVectorizer:
         all_docs = swagger_docs + allure_docs
         self.store_vectors(all_docs)
 
+
 if __name__ == "__main__":
     swagger_url = "http://127.0.0.1:8000/openapi.json"
     allure_results_dir = "./allure-results"

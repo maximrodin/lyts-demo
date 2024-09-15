@@ -4,7 +4,7 @@ from fastapi import FastAPI, Depends, HTTPException
 from typing import List
 from sqlmodel import Session, select, SQLModel
 
-from models import Task, TaskCreate, TaskRead
+from db_models import Task, TaskCreate, TaskRead
 from database import engine, get_session
 
 
@@ -80,5 +80,4 @@ def delete_task(*, session: Session = Depends(get_session), task_id: int):
 
 if __name__ == "__main__":
     import uvicorn
-
-    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+    uvicorn.run("task_manager:app", host="0.0.0.0", port=8000, reload=True)

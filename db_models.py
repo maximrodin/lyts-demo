@@ -1,4 +1,4 @@
-# models.py
+# db_models.py
 from typing import Optional
 from sqlmodel import SQLModel, Field
 from datetime import datetime
